@@ -9,7 +9,7 @@ const Form = props => (
         <input type = "text"
                id = "usernameInput"
                className = "form-control col-sm-7"
-               placeholder = "eg: Gitboy69"
+               placeholder = "eg: Gitboy3000"
                value = {props.value}
                onChange = {props.handleChange}
                style = {styles.input} />
