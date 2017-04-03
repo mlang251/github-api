@@ -18,12 +18,12 @@ class App extends React.Component {
     getProfile(username) {
         axios.get(`http://api.github.com/users/${username}`)
             .then(response => {
-                const data = response.data;
+                const {name, login, avatar_url, html_url} = response.data;
                 const userProfile = {
-                    name: data.name,
-                    login: data.login,
-                    avatar_url: data.avatar_url,
-                    html_url: data.html_url
+                    name,
+                    login,
+                    avatar_url,
+                    html_url
                 }
                 this.setState({userProfile: userProfile});
             })
